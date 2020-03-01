@@ -2,8 +2,12 @@ let ArrayList = {
     array: [],
     size: 0,
     init: function(argument) {
+        if((typeof argument) !== 'object') {
+            return 'Please input an array'
+        } else {
         ArrayList.array = argument;
         ArrayList.size = argument.length;
+        }
     },
     addAtEnd: function(arrElm) {
         const arr = ArrayList.array;
@@ -14,29 +18,15 @@ let ArrayList = {
         ArrayList.array = [];
         ArrayList.size = 0
     },
+    clearFromEnd: function() {
+        const arr = ArrayList.array;
+        arr.length = [arr.length - 1];
+        ArrayList.size = arr.length;
+    },
+    clearFirst: function() {
+        const arr = ArrayList.array;
+        do {i += 1;
+
+          } while (i = 0)
+    }
 };
-
-
-
-// let ArrayList = {
-//     array: [],
-//     size: 0,
-//     init: function(argument) {
-//         ArrayList.array = argument;
-//         ArrayList.size = argument.length;
-//     },
-//     addAtEnd: function(arrElm) {
-//         const arr = ArrayList.array;
-//         arr[arr.length] = arrElm;
-//         ArrayList.size = arr.length;
-//     },
-// };
-
-// ArrayList.init([1, 3, 5])
-// undefined
-// ArrayList
-// {array: Array(3), size: 3, init: ƒ, addAtEnd: ƒ}array: (3) [1, 3, 5]size: 3init: ƒ (argument)addAtEnd: ƒ (arrElm)__proto__: Object
-// ArrayList.addAtEnd('Elnur')
-// undefined
-// ArrayList
-// {array: Array(4), size: 4, init: ƒ, addAtEnd: ƒ}array: Array(4)0: 11: 32: 53: "Elnur"length: 4__proto__: Array(0)size: 4init: ƒ (argument)addAtEnd: ƒ (arrElm)__proto__: Object
