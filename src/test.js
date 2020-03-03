@@ -15,8 +15,8 @@ function Node(value) {
 }
 
 let node2 = new Node(5);
-console.log(node2);
 
+console.log(node2);
 
 function LinkedList() {
     this.root = null;
@@ -24,5 +24,8 @@ function LinkedList() {
 };
 
 LinkedList.prototype.addElm = function(value) {
-    const tempNode = new Node(value)
+    const tempNode = new Node(value);
+    tempNode.next = this.root;
+    this.root = tempNode;
+    this.size++
 };
