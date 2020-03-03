@@ -28,4 +28,4 @@ LinkedList.prototype.addElm = function(value) {
     tempNode.next = this.root;
     this.root = tempNode;
     this.size++
-};
+}
